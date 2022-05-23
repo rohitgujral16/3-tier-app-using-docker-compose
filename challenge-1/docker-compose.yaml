@@ -1,7 +1,7 @@
 version: '3'
 services:
   frontend:
-    image: frontend-app:latest
+    build: ./frontend
     ports:
       - "8010:8010"
     depends_on:
@@ -10,7 +10,7 @@ services:
     networks:
       - my-network
   backend:
-    image: backend-app:latest
+    build: ./backend
     ports:
       - "8000:8000"
     depends_on:
